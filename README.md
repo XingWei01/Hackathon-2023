@@ -1,9 +1,9 @@
 # Hackathon 2023
 
-Nom du projet : INFOmon
-Auteur : Xing Wei
-Nombre de crédits accumulés à date : 28
-Description du projet : INFOmon est une recréation du jeu populaire "PokeMon" avec des logiciels ou des langages de programmaation comme monstres. 
+  - Nom du projet : INFOmon
+  - Auteur : Xing Wei
+  - Nombre de crédits accumulés à date : 28
+  - Description du projet : INFOmon est une recréation du jeu populaire "PokeMon" avec des logiciels ou des langages de programmaation comme monstres. 
 
 
   Étant donné le thème de ce Hackathon est "une experience nostalgique" que l'on essayera de recréer (que ce soit sous la forme d'un jeu video, ou d'un site web qui nous aurait pu faciliter la vie à l'époque, j'ai opté plutôt vers la recréation d'une de mes expériences qui a défini mon enfance : PokeMon. Comme j'ai écrit dans les crédits, mes parents n'ont jamais eu le temps de trop s'occuper de moi à mon enfance, et PokeMon m'aidait à ne pas m'ennuyer ou manquer mes parents trop. En effet, je trouvais les interactions et le concept de jouer à des RPG (role playing games) vraiment captivant. C'est pourquoi, j'ai pensé que ce serait un projet idéal dans le cable de ce Hackathon 2023.
