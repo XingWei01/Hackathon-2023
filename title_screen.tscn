@@ -1,0 +1,148 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvtn4e5g85njs"]
+
+[ext_resource type="Script" path="res://Title Screen.gd" id="1_yi7rs"]
+[ext_resource type="Texture2D" uid="uid://b0o8avgp2bfiu" path="res://Images/istockphoto-1333010525-612x612.jpg" id="2_f0rcv"]
+[ext_resource type="PackedScene" uid="uid://dcyx0bhgkeyhb" path="res://Monsters/Chrome.tscn" id="3_dwxmh"]
+[ext_resource type="Texture2D" uid="uid://tbcxxl7dtvgp" path="res://INFOmonLogo.png" id="4_kxy2t"]
+
+[node name="Title Screen" type="Node2D"]
+script = ExtResource("1_yi7rs")
+
+[node name="Istockphoto-1333010525-612x612" type="Sprite2D" parent="."]
+position = Vector2(575, 324.25)
+scale = Vector2(1.88562, 1.76431)
+texture = ExtResource("2_f0rcv")
+
+[node name="Play" type="Button" parent="."]
+offset_left = 176.0
+offset_top = 96.0
+offset_right = 440.0
+offset_bottom = 176.0
+text = "Play"
+
+[node name="How to play" type="Button" parent="."]
+offset_left = 176.0
+offset_top = 208.0
+offset_right = 440.0
+offset_bottom = 288.0
+text = "How to play"
+
+[node name="Credits" type="Button" parent="."]
+offset_left = 176.0
+offset_top = 320.0
+offset_right = 440.0
+offset_bottom = 400.0
+text = "Credits"
+
+[node name="Back" type="Button" parent="."]
+offset_left = 176.0
+offset_top = 432.0
+offset_right = 440.0
+offset_bottom = 512.0
+text = "Back"
+
+[node name="Exit" type="Button" parent="."]
+offset_left = 176.0
+offset_top = 432.0
+offset_right = 440.0
+offset_bottom = 512.0
+text = "Exit
+"
+
+[node name="Chrome" parent="." instance=ExtResource("3_dwxmh")]
+position = Vector2(832, 456)
+scale = Vector2(5.505, 5.505)
+
+[node name="BGdrop" type="Polygon2D" parent="."]
+position = Vector2(8, 8)
+color = Color(0.87451, 0.87451, 0.87451, 1)
+polygon = PackedVector2Array(520, 56, 520, 560, 1088, 560, 1088, 56)
+
+[node name="CreditsMenu" type="Polygon2D" parent="."]
+color = Color(0.196078, 0.196078, 0.196078, 1)
+polygon = PackedVector2Array(528, 64, 528, 560, 1088, 560, 1088, 64)
+
+[node name="credz" type="Label" parent="CreditsMenu"]
+offset_left = 552.0
+offset_top = 88.0
+offset_right = 1067.0
+offset_bottom = 536.0
+text = "   ===   CREDITS   ========================================
+
+This entire project was built by Xing Wei, a computer engineering
+student in his 2nd year at Polytechnique Montréal. 
+
+Inspired by many YouTube videos, Google and my childhood, the 
+idea of recreating a game like \"Pokemon\" came to mind when the
+theme: \"Nostalgic experience\" was announced.
+
+Pokemon has been a big part of my childhood. As an only child, my
+parents didn't always have the time to play with me. However, 
+the interactiveness of the Pokemon games, paired up with the 
+show, really was  a highlight of my childhood, and is one I am glad
+I got to experience as a child.
+
+As a sort of homage to that said experience, I created this game:
+INFOmon."
+
+[node name="howToPlayMenu" type="Polygon2D" parent="."]
+color = Color(0.196078, 0.196078, 0.196078, 1)
+polygon = PackedVector2Array(528, 64, 528, 560, 1088, 560, 1088, 64)
+
+[node name="Howto" type="Label" parent="howToPlayMenu"]
+offset_left = 552.0
+offset_top = 88.0
+offset_right = 1064.0
+offset_bottom = 536.0
+text = "=== HOW TO PLAY ========================================
+
+
+    - Use the ARROW_KEYS to move player model.
+
+
+    - Use LEFT_MOUSE_CLICK to click on the move you want to
+perform.
+
+
+    - Use ARROW_KEYS, alternatively, to choose the move you want
+to perform. Press ENTER to Confirm.
+
+(DISCLAMER : Moving the ARROW_KEYS mid battle will cause your
+player model to move too. This is a bug and has not been fixed yet
+if you still see this)"
+
+[node name="InfOmonLogo" type="Sprite2D" parent="."]
+position = Vector2(832, 200)
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("4_kxy2t")
+
+[node name="InfOmonLogo2" type="Sprite2D" parent="."]
+position = Vector2(312, 240)
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("4_kxy2t")
+
+[node name="Background" type="Polygon2D" parent="."]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 1152, 0, 1152, 648, 0, 648)
+
+[node name="DISCLAMER" type="Label" parent="Background"]
+offset_right = 1152.0
+offset_bottom = 640.0
+text = "DISCLAIMER: 
+
+Created under the context of a Hackathon,
+ INFOmon is a fan-made recreation of the popular game Pokémon, 
+featuring software programs instead of creatures. 
+Please note that this project is still in its early stages of development and is not yet complete. 
+As a result, users may encounter bugs, incompletions, 
+or unexpected issues while interacting with INFOmon. We appreciate your understanding 
+and patience as we continue to work on improving and enhancing this experience. 
+Thank you for your support and enthusiasm for this project!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="How to play" to="." method="_on_how_to_play_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
