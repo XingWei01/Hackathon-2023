@@ -8,7 +8,7 @@
 
   Étant donné le thème de ce Hackathon est "une experience nostalgique" que l'on essayera de recréer (que ce soit sous la forme d'un jeu video, ou d'un site web qui nous aurait pu faciliter la vie à l'époque, j'ai opté plutôt vers la recréation d'une de mes expériences qui a défini mon enfance : PokeMon. Comme j'ai écrit dans les crédits, mes parents n'ont jamais eu le temps de trop s'occuper de moi à mon enfance, et PokeMon m'aidait à ne pas m'ennuyer ou manquer mes parents trop. En effet, je trouvais les interactions et le concept de jouer à des RPG (role playing games) vraiment captivant. C'est pourquoi, j'ai pensé que ce serait un projet idéal dans le cable de ce Hackathon 2023.
 
-# Notes par rapport au jeu : 
+# CE QUI EST FAIT : 
 
 Évidemment, le jeu n'est pas terminé. Cependant, la grande image est déjà établie :
   - Un Menu de départ a été créé afin de pouvoir afficher le "Comment jouer", les crédits, le bouton pour quitter le jeu, et pour débuter le jeu.
