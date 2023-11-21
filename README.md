@@ -1,4 +1,4 @@
-# INFOmon - Hackathon 2023 
+# | PATCH 1.0 | INFOmon - Hackathon 2023 
 
   - Nom du projet : INFOmon
   - Auteur : Xing Wei
