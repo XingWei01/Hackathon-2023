@@ -1,0 +1,412 @@
+[gd_scene load_steps=14 format=3 uid="uid://dxefficta6weu"]
+
+[ext_resource type="Texture2D" uid="uid://vjr4bkgpetym" path="res://Images/Battle Scene.png" id="1_856eq"]
+[ext_resource type="Script" path="res://Battle Scene/battle.gd" id="1_lnre1"]
+[ext_resource type="Script" path="res://Battle Scene/UI.gd" id="3_jopyu"]
+[ext_resource type="Script" path="res://Battle Scene/EnemyUI.gd" id="4_f8cky"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_grgx3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mh0c6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pb7qn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rw8mr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dkran"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hogtw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yrgyl"]
+bg_color = Color(0, 0.721569, 0.321569, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b3wpx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m8cpf"]
+bg_color = Color(0, 0.627451, 0.988235, 1)
+
+[node name="Battle" type="CanvasLayer"]
+script = ExtResource("1_lnre1")
+
+[node name="BattleScene" type="Sprite2D" parent="."]
+position = Vector2(576.25, 324.25)
+scale = Vector2(1.60153, 1.35177)
+texture = ExtResource("1_856eq")
+
+[node name="Health Bar" type="Node2D" parent="."]
+
+[node name="Empty Health Bar Player" type="Polygon2D" parent="Health Bar"]
+position = Vector2(-67.9999, 0)
+scale = Vector2(1.07143, 1)
+polygon = PackedVector2Array(840, 368, 1064, 368, 1064, 376, 840, 376)
+
+[node name="Empty Health Bar Enemy" type="Polygon2D" parent="Health Bar"]
+polygon = PackedVector2Array(248, 136, 480, 136, 480, 144, 248, 144)
+
+[node name="Player" type="Node2D" parent="."]
+position = Vector2(288, 384)
+scale = Vector2(7.51, 7.51)
+
+[node name="Enemy" type="Node2D" parent="."]
+position = Vector2(848, 200)
+scale = Vector2(7, 7)
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(855.999, 184)
+scale = Vector2(7.51, 7.51)
+color = Color(0, 0.34902, 0.32549, 1)
+polygon = PackedVector2Array(-37.2835, 35.1531, -37.2835, 38.3489, -105.459, 38.3489, -105.459, 39.4141, -106.524, 39.4141, -106.524, 40.4794, -107.59, 40.4794, -107.59, 56.4581, -106.524, 56.4581, -106.524, 57.5233, -105.459, 57.5233, -105.459, 58.5886, -37.3175, 58.5886, -37.2835, 58.5886, -37.2835, 57.5233, -36.2182, 57.5233, -36.2182, 56.4581, -35.153, 56.4581, -35.153, 40.4794, -36.2182, 40.4794, -36.2182, 39.4141, -37.2835, 39.4141, -37.2835, 38.3489, -35.153, 38.3489, -33.0225, 38.3489, -30.892, 38.3489, -30.892, 39.4141, -31.9573, 39.4141, -31.9573, 40.4794, -33.0225, 40.4794, -33.0225, 56.4581, -31.9573, 56.4581, -31.9573, 57.5233, -30.892, 57.5233, -30.892, 58.5886, 30.8923, 58.5886, 30.8923, 57.5233, 31.9575, 57.5233, 31.9575, 56.4581, 33.0228, 56.4581, 33.0228, 40.4794, 31.9575, 40.4794, 31.9575, 39.4141, 30.8923, 39.4141, 30.9641, 38.3489, -35.153, 38.3489, -37.2835, 38.3489, -37.2835, 35.1531, 39.4142, 35.1531, 39.4142, 58.5886, 39.4142, 61.7843, -113.981, 61.7843, -113.981, 35.1531)
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(2.049, 2.049)
+script = ExtResource("3_jopyu")
+
+[node name="Menu" type="HBoxContainer" parent="UI"]
+visible = false
+layout_mode = 0
+offset_left = 335.773
+offset_top = 242.069
+offset_right = 517.773
+offset_bottom = 309.069
+
+[node name="GridContainer" type="GridContainer" parent="UI/Menu"]
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 5
+columns = 2
+
+[node name="Attack" type="Button" parent="UI/Menu/GridContainer"]
+layout_mode = 2
+focus_neighbor_right = NodePath("../Switch")
+focus_neighbor_bottom = NodePath("../Capture")
+theme_override_colors/font_color = Color(0.858824, 0.858824, 0.858824, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_grgx3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mh0c6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pb7qn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_rw8mr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dkran")
+text = "ATTACK
+"
+
+[node name="Switch" type="Button" parent="UI/Menu/GridContainer"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../Attack")
+focus_neighbor_bottom = NodePath("../Run")
+theme_override_colors/font_color = Color(0.858824, 0.858824, 0.858824, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_grgx3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mh0c6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pb7qn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_rw8mr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dkran")
+text = "  SWITCH  "
+
+[node name="Capture" type="Button" parent="UI/Menu/GridContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../Attack")
+focus_neighbor_right = NodePath("../Run")
+theme_override_colors/font_color = Color(0.858824, 0.858824, 0.858824, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_grgx3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mh0c6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pb7qn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_rw8mr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dkran")
+text = " CAPTURE "
+
+[node name="Run" type="Button" parent="UI/Menu/GridContainer"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../Capture")
+focus_neighbor_top = NodePath("../Switch")
+theme_override_colors/font_color = Color(0.858824, 0.858824, 0.858824, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_grgx3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mh0c6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pb7qn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_rw8mr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dkran")
+text = "RUN"
+
+[node name="Fight" type="HBoxContainer" parent="UI"]
+offset_left = 304.539
+offset_top = 242.069
+offset_right = 584.539
+offset_bottom = 323.069
+scale = Vector2(0.810977, 0.810977)
+
+[node name="GridContainer" type="GridContainer" parent="UI/Fight"]
+layout_mode = 2
+theme_override_constants/h_separation = -10
+theme_override_constants/v_separation = 10
+columns = 2
+
+[node name="Move 1" type="Button" parent="UI/Fight/GridContainer"]
+layout_mode = 2
+focus_neighbor_right = NodePath("../Move 3")
+focus_neighbor_bottom = NodePath("../Move 2")
+theme_override_colors/font_color = Color(0.858824, 0.858824, 0.858824, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_grgx3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mh0c6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pb7qn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_rw8mr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dkran")
+text = "Quick Surf
+"
+
+[node name="Move 3" type="Button" parent="UI/Fight/GridContainer"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../Move 1")
+focus_neighbor_bottom = NodePath("../Back")
+theme_override_colors/font_color = Color(0.858824, 0.858824, 0.858824, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_grgx3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mh0c6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pb7qn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_rw8mr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dkran")
+text = "QUICK SURF"
+
+[node name="Move 2" type="Button" parent="UI/Fight/GridContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../Move 1")
+focus_neighbor_right = NodePath("../Back")
+theme_override_colors/font_color = Color(0.858824, 0.858824, 0.858824, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_grgx3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mh0c6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pb7qn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_rw8mr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dkran")
+text = "TAB SWITCH STRIKE"
+
+[node name="Back" type="Button" parent="UI/Fight/GridContainer"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../Move 2")
+focus_neighbor_top = NodePath("../Move 3")
+theme_override_colors/font_color = Color(0.858824, 0.858824, 0.858824, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_grgx3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mh0c6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pb7qn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_rw8mr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dkran")
+text = "Back"
+
+[node name="Switch" type="HBoxContainer" parent="UI"]
+offset_left = 308.443
+offset_top = 238.165
+offset_right = 490.443
+offset_bottom = 305.165
+
+[node name="GridContainer" type="GridContainer" parent="UI/Switch"]
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 5
+columns = 2
+
+[node name="INFOmon 1" type="Button" parent="UI/Switch/GridContainer"]
+layout_mode = 2
+focus_neighbor_right = NodePath("../INFOmon 2")
+focus_neighbor_bottom = NodePath("../INFOmon 3")
+theme_override_colors/font_color = Color(0.858824, 0.858824, 0.858824, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_grgx3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mh0c6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pb7qn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_rw8mr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dkran")
+text = "IM1
+"
+
+[node name="INFOmon 2" type="Button" parent="UI/Switch/GridContainer"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../INFOmon 1")
+focus_neighbor_bottom = NodePath("../Back")
+theme_override_colors/font_color = Color(0.858824, 0.858824, 0.858824, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_grgx3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mh0c6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pb7qn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_rw8mr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dkran")
+text = "IM2"
+
+[node name="INFOmon 3" type="Button" parent="UI/Switch/GridContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../INFOmon 1")
+focus_neighbor_right = NodePath("../Back")
+theme_override_colors/font_color = Color(0.858824, 0.858824, 0.858824, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_grgx3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mh0c6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pb7qn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_rw8mr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dkran")
+text = "IM3"
+
+[node name="Back" type="Button" parent="UI/Switch/GridContainer"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../INFOmon 3")
+focus_neighbor_top = NodePath("../INFOmon 2")
+theme_override_colors/font_color = Color(0.858824, 0.858824, 0.858824, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_grgx3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mh0c6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pb7qn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_rw8mr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dkran")
+text = "Back"
+
+[node name="PlayerName" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 335.773
+offset_top = 152.269
+offset_right = 397.773
+offset_bottom = 178.269
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Chrome"
+
+[node name="Level" type="Label" parent="UI"]
+offset_left = 495.851
+offset_top = 152.269
+offset_right = 535.851
+offset_bottom = 178.269
+scale = Vector2(0.895787, 0.904003)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "1"
+
+[node name="HpCurrent" type="Label" parent="UI"]
+offset_left = 460.712
+offset_top = 187.408
+offset_right = 500.712
+offset_bottom = 213.408
+scale = Vector2(0.725141, 0.731791)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "19"
+
+[node name="HpMax" type="Label" parent="UI"]
+offset_left = 488.043
+offset_top = 187.408
+offset_right = 528.043
+offset_bottom = 213.408
+scale = Vector2(0.725141, 0.731791)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "19"
+
+[node name="HpBar" type="ProgressBar" parent="UI"]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 178.0
+offset_right = 519.0
+offset_bottom = 205.0
+scale = Vector2(1, 0.277697)
+theme_override_styles/background = SubResource("StyleBoxEmpty_hogtw")
+theme_override_styles/fill = SubResource("StyleBoxFlat_yrgyl")
+value = 50.0
+show_percentage = false
+
+[node name="ExpBar" type="ProgressBar" parent="UI"]
+layout_mode = 0
+offset_left = 370.912
+offset_top = 210.346
+offset_right = 518.912
+offset_bottom = 237.346
+scale = Vector2(1, 0.219132)
+theme_override_styles/background = SubResource("StyleBoxEmpty_b3wpx")
+theme_override_styles/fill = SubResource("StyleBoxFlat_m8cpf")
+value = 50.0
+show_percentage = false
+
+[node name="EnemyUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -584.0
+offset_top = -232.0
+offset_right = -544.0
+offset_bottom = -192.0
+scale = Vector2(2.049, 2.049)
+script = ExtResource("4_f8cky")
+
+[node name="EnemyName" type="Label" parent="EnemyUI"]
+layout_mode = 0
+offset_left = 335.773
+offset_top = 152.269
+offset_right = 397.773
+offset_bottom = 178.269
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Chrome"
+
+[node name="Level" type="Label" parent="EnemyUI"]
+offset_left = 495.851
+offset_top = 152.269
+offset_right = 535.851
+offset_bottom = 178.269
+scale = Vector2(0.895787, 0.904003)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "1"
+
+[node name="HpBar" type="ProgressBar" parent="EnemyUI"]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 178.0
+offset_right = 519.0
+offset_bottom = 205.0
+scale = Vector2(1, 0.277697)
+theme_override_styles/background = SubResource("StyleBoxEmpty_hogtw")
+theme_override_styles/fill = SubResource("StyleBoxFlat_yrgyl")
+value = 50.0
+show_percentage = false
+
+[node name="Action" type="Label" parent="."]
+offset_left = 72.0
+offset_top = 488.0
+offset_right = 433.0
+offset_bottom = 577.0
+scale = Vector2(1.35, 1.35)
+text = "Trainer Chin sent out Chrome.
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="UI/Menu/GridContainer/Attack" to="UI" method="_on_attack_pressed"]
+[connection signal="pressed" from="UI/Menu/GridContainer/Switch" to="UI" method="_on_switch_pressed"]
+[connection signal="pressed" from="UI/Menu/GridContainer/Capture" to="UI" method="_on_capture_pressed"]
+[connection signal="pressed" from="UI/Menu/GridContainer/Run" to="UI" method="_on_run_pressed"]
+[connection signal="pressed" from="UI/Fight/GridContainer/Move 1" to="UI" method="_on_move_pressed" binds= [0]]
+[connection signal="pressed" from="UI/Fight/GridContainer/Move 3" to="UI" method="_on_move_pressed" binds= [2]]
+[connection signal="pressed" from="UI/Fight/GridContainer/Move 2" to="UI" method="_on_move_pressed" binds= [1]]
+[connection signal="pressed" from="UI/Fight/GridContainer/Back" to="UI" method="_on_back_pressed"]
+[connection signal="pressed" from="UI/Switch/GridContainer/INFOmon 1" to="UI" method="_on_inf_omon_pressed" binds= [0]]
+[connection signal="pressed" from="UI/Switch/GridContainer/INFOmon 2" to="UI" method="_on_inf_omon_pressed" binds= [1]]
+[connection signal="pressed" from="UI/Switch/GridContainer/INFOmon 3" to="." method="_on_inf_omon_pressed" binds= [2]]
+[connection signal="pressed" from="UI/Switch/GridContainer/Back" to="UI" method="_on_back_pressed"]
