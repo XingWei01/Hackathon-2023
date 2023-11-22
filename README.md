@@ -1,15 +1,17 @@
 # | PATCH 1.0 | INFOmon - Hackathon 2023 
 
   - Nom du projet : INFOmon
-  - Auteur : Xing Wei
+  - Nom de l'équipe : Valengers
+  - Membre : Xing Wei
   - Nombre de crédits accumulés à date : 28
   - Description du projet : INFOmon est une recréation du jeu populaire "PokeMon" avec des logiciels ou des langages de programmaation comme monstres.
   - Lieu ou ce trouve le fichier .exe : INFOmon.rar
 
+# L'INSPIRATION - Ma Solution :
 
-  Étant donné le thème de ce Hackathon est "une experience nostalgique" que l'on essayera de recréer (que ce soit sous la forme d'un jeu video, ou d'un site web qui nous aurait pu faciliter la vie à l'époque, j'ai opté plutôt vers la recréation d'une de mes expériences qui a défini mon enfance : PokeMon. Comme j'ai écrit dans les crédits, mes parents n'ont jamais eu le temps de trop s'occuper de moi à mon enfance, et PokeMon m'aidait à ne pas m'ennuyer ou manquer mes parents trop. En effet, je trouvais les interactions et le concept de jouer à des RPG (role playing games) vraiment captivant. C'est pourquoi, j'ai pensé que ce serait un projet idéal dans le cable de ce Hackathon 2023.
+  Étant donné le thème de ce Hackathon est "une experience nostalgique" que l'on essayera de recréer ou de résoudre (que ce soit sous la forme d'un jeu video, ou d'un site web qui nous aurait pu faciliter la vie à l'époque, j'ai opté plutôt vers la recréation d'une de mes expériences qui a défini mon enfance : PokeMon. Comme j'ai écrit dans les crédits, mes parents n'ont jamais eu le temps de trop s'occuper de moi à mon enfance, et PokeMon m'aidait à ne pas m'ennuyer ou manquer mes parents trop. En effet, l'accès à une nintendo DS était vraiment difficile, c'est-à-dire que j'ai dû demander à plusieurs reprises avant de finalement l'avoir. Cependant, si j'avais accès à un jeu du style de pokemon via un ordinateur (ce dont on avait chez nous), je n'aurais pas eu à demander à tout bout de champ à ce que mes parents m'achètent un DS. C'est pourquoi, j'ai pensé que ce serait un projet idéal dans le cable de ce Hackathon 2023.
 
-# CE QUI EST FAIT : 
+ # CE QUI EST FAIT :
 
 Évidemment, le jeu n'est pas terminé. Cependant, la grande image est déjà établie :
   - Un Menu de départ a été créé afin de pouvoir afficher le "Comment jouer", les crédits, le bouton pour quitter le jeu, et pour débuter le jeu.
@@ -36,3 +38,7 @@
 
   - L'animation pour marcher vers la droite ne semble pas fonctionner pour une raison quelconque alors que les autres 3 directions fonctionnent (Je n'ai pas trop toucher après que les 3 autres fonctionnaient puisque je ne voulais pas que soudainement aucune direction ne fonctionne)
   - Le frame pour l'animation pour marcher peut être ajuster puisque des fois, le joueur arrête dans l'animation où il ferait un pas.
+
+# LIEN DE LA VIDEO : 
+
+    https://drive.google.com/file/d/1uZkwqeSAbktBhVeGxLKprUIZlJ17Zk3d/view?usp=sharing
